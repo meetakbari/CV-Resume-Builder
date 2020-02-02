@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CV_volunteer" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="71a3ac9f-e306-4c09-b167-6344bd797ec1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="user" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM volunteerexperience WHERE UserId = $P{user};]]>
+	</queryString>
+	<field name="UserId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vOrganization" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vYear" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vEvent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="2223ec1f-8e82-4941-a6c7-6263ce9c5352"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="99" y="0" width="100" height="20" uuid="0ad9e5c9-338b-46fe-b367-eda4863d3d61"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Event                  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="199" y="0" width="100" height="20" uuid="0c1561d6-6967-49e2-9e7f-0761f9d0f49d"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vEvent}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="20" width="100" height="20" uuid="ea7c635c-19e8-4f0f-8038-2c48cb0e8c0a"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Organization      :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="20" width="100" height="20" uuid="483cdc2e-cc5d-48cb-8774-2d5d36006545"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vOrganization}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

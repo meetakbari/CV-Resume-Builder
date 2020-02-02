@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Resume1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="c8abe75d-231d-425b-ac49-c7f1c5d1c85b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="user" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\oop_lab\\Netbeans_workspace\\CV_Resume\\src\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM `personal_information` WHERE UserId=$P{user};]]>
+	</queryString>
+	<field name="UserId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LastName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Profession" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Phone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DOB" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LinkedIn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="705" splitType="Stretch">
+			<staticText>
+				<reportElement x="205" y="11" width="130" height="30" uuid="5874a398-dbc8-4727-9f16-414911f5d317"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Career Objective]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="338" width="195" height="366" backcolor="#003366" uuid="cfd279c0-c941-48bf-b934-c9d547b367b1"/>
+			</rectangle>
+			<line>
+				<reportElement x="205" y="10" width="339" height="1" uuid="d8fc3607-1552-4f5d-bebe-93e3ec80ee7d"/>
+			</line>
+			<line>
+				<reportElement x="205" y="41" width="339" height="1" uuid="26428e70-74cc-4e29-b5fd-5c10e3b73629"/>
+			</line>
+			<line>
+				<reportElement x="205" y="211" width="339" height="1" uuid="72c8291f-a00b-421b-ba05-e73f61525906"/>
+			</line>
+			<line>
+				<reportElement x="205" y="180" width="339" height="1" uuid="6496405d-0d48-44b6-b009-fb0ef1687b14"/>
+			</line>
+			<staticText>
+				<reportElement x="205" y="181" width="130" height="30" uuid="e6574569-f589-4aed-8dbf-5d0dada65526"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Experience]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="456" width="130" height="29" uuid="84b41763-7de4-4613-9f83-31122440d9c9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Education]]></text>
+			</staticText>
+			<line>
+				<reportElement x="205" y="455" width="339" height="1" uuid="d4bb4505-63db-4833-82fe-0d97a456673c"/>
+			</line>
+			<line>
+				<reportElement x="205" y="486" width="339" height="1" uuid="5f37fd62-2245-4766-8409-dd7ecc07edad"/>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="0" width="195" height="338" backcolor="#003366" uuid="a11318e9-cb42-4284-a266-4d72df412a0f"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="338" width="192" height="23" forecolor="#FFFFFF" backcolor="#032743" uuid="5c73b191-7a94-4c31-b2c8-a3339ca5700c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  Skills]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="42" width="171" height="28" forecolor="#FFFFFF" uuid="10cc9875-c659-40df-9f97-11cf117b9004"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Profession}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="10" y="12" width="171" height="30" forecolor="#FFFFFF" uuid="0b7d6e57-23f4-4e3c-b426-68540085214f"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FirstName}.concat(" ").concat($F{LastName})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="246" width="171" height="20" forecolor="#FFFFFF" uuid="f659e728-41ea-4b2c-8a5b-77ac94d97f04"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="152" width="171" height="34" forecolor="#FFFFFF" uuid="8be9de45-d636-4245-9b53-1948926e237a"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="132" width="100" height="20" forecolor="#FFFFFF" uuid="d618d089-04a3-4779-b366-1846d847adaa"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="266" width="100" height="20" forecolor="#FFFFFF" uuid="dec72586-a0fe-4677-8802-d36ff6672402"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LinkedIn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="226" width="100" height="20" forecolor="#FFFFFF" uuid="3336d760-321f-41dc-8588-fc0ffcf418fe"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="3" y="89" width="192" height="23" forecolor="#FFFFFF" backcolor="#032743" uuid="550a85cd-371d-4b81-b9a4-28228910f4c5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   Personal Info]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="286" width="171" height="20" forecolor="#FFFFFF" uuid="b480d290-44ba-4af5-aa3e-5e15d2cad571"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LinkedIn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="17" y="206" width="100" height="20" forecolor="#FFFFFF" uuid="6be34149-3ba4-44e9-bc44-abf5e128fd32"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="186" width="100" height="20" forecolor="#FFFFFF" uuid="ca3171a0-03bf-41da-beca-42000de3673f"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="17" y="371" width="164" height="287" uuid="c80b22e5-4a80-4d95-825a-a78b2284d94b"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "report7.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="205" y="52" width="339" height="115" uuid="bced628f-9d38-4da9-9e9d-4913f6d12143"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "report8_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="205" y="226" width="339" height="203" uuid="fd42f28d-50fc-433f-8428-0ecf56cb983b"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "report8_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="205" y="501" width="339" height="203" uuid="f06918ae-9e4f-4002-a742-3298130c0ddd"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "report8_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

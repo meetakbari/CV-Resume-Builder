@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Resume2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32b06768-b44a-40c8-8192-567889adb834">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="user" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\oop_lab\\Netbeans_workspace\\Special\\src\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM Personal_information WHERE UserId = $P{user}]]>
+	</queryString>
+	<field name="UserId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FirstName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LastName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Profession" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Phone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DOB" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LinkedIn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="733" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="81" backcolor="#000099" uuid="4a2e0b2e-171f-4b80-a303-495bac90c445"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="48" forecolor="#FFFFFF" uuid="a14f6f85-87ad-476b-b347-94e6fbd43fbf"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="36" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FirstName} + " " + $F{LastName}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="317" y="81" width="238" height="648" backcolor="#CCCCCC" uuid="7e7105d5-29f9-4870-8ce2-87fca3f923cd"/>
+				<graphicElement>
+					<pen lineWidth="0.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="332" y="103" width="212" height="23" uuid="bb7d60c0-691b-46a1-9ab1-706c48b53282"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="48" width="555" height="33" forecolor="#FFFFFF" uuid="107b9ce1-1119-47fb-b09f-2f7ca1259989"/>
+				<textElement textAlignment="Center">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Profession}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="136" width="212" height="45" uuid="659bdaab-b29b-4870-945e-a224f9fb8ab7"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="192" width="212" height="20" uuid="93c53b69-304b-4abb-9d85-49ba270330a6"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Phone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="222" width="212" height="20" uuid="342ae872-69f3-4c2c-987a-57304e626b26"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LinkedIn}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="332" y="265" width="212" height="1" uuid="f3ef63d9-de27-4525-a6d3-5b4137ed1469"/>
+			</line>
+			<staticText>
+				<reportElement x="332" y="276" width="142" height="23" uuid="26fae86f-eb22-431c-b48a-bbe6d460fb44"/>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Skills]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="332" y="310" width="200" height="381" uuid="b16af9d2-947b-4869-bc7e-cb4480319d74"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Resume2_skills.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="12" y="92" width="179" height="23" uuid="0fb0dedd-4769-4ec2-8808-52fe1848189f"/>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Professional Summary]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="12" y="126" width="287" height="150" uuid="5855ec8a-90ce-43eb-a4c1-19b41a849dfc"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Resume2_summary.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="12" y="287" width="179" height="23" uuid="72161640-7eac-42db-8b60-d4006afaaeb4"/>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Experience]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="12" y="323" width="287" height="155" uuid="c47e3740-930c-4f7b-8a75-9b8926d4ffb3"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Resume2_experience.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="12" y="492" width="179" height="23" uuid="12eb02ac-dee0-4ff4-9981-224dc91a38d7"/>
+				<textElement>
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Education]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="12" y="525" width="287" height="204" uuid="987d984f-255e-4426-84c1-8f5d2120f461"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="user">
+					<subreportParameterExpression><![CDATA[$P{user}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Resume2_education.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="12" y="478" width="268" height="1" uuid="56ffbfbe-4882-49de-a10d-247d2e125afa"/>
+			</line>
+			<line>
+				<reportElement x="12" y="274" width="268" height="2" uuid="29fcd3d9-f74a-49bb-b60e-37afa02631fe"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
